@@ -12,7 +12,7 @@
                 <li repeat.for="[key, value] of group" click.delegate="selectMenu(value, key)" value.bind="activeMenu" class.bind="activeMenu == value ? 'active' : ''">
                     <a href="#" title.bind="key.toUpperCase()">
                         <i class="fa fa-table" if.bind="key.toUpperCase() == 'CUSTOMS-REPORT'"></i>
-                        <i class="fa fa-users" if.bind="key.toUpperCase() == 'AUTH'"></i>
+                        <!--<i class="fa fa-users" if.bind="key.toUpperCase() == 'AUTH'"></i>-->
 
                         <!--<i class="fa fa-dashboard"></i>-->
                         <span if.bind="!minimized">${key.toUpperCase()}</span>
