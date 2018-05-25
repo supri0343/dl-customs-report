@@ -21,7 +21,7 @@ export class List {
         }
     };
      
-    Types = ["","BC 2.6.1","BC 3.0","BC 4.0","BC 4.1","BC 2.7","BC 2.5"];
+    Types = ["","BC 2.6.1","BC 3.0","BC 4.0","BC 4.1","BC 2.7","BC 2.7 SUBKON","BC 2.5"];
 
 
     search(){
