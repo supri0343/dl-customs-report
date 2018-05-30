@@ -53,20 +53,20 @@ module.exports = [
         }
 
     },
-    {
-        route: '/customs-report/fact-item-mutation-bb-unit',
-        name: 'customs-report-item-mutation-bb-unit',
-        moduleId: './modules/customs-report/fact-item-mutation-bb-unit/index',
-        nav: true,
-        title: 'Laporan Pertanggungjawaban Mutasi Bahan Baku Unit',
-        auth: true,
-        settings: {
-            group: "customs-report",
-            permission: { "C5": 1, "C9": 1 },
-            iconClass: 'fa fa-dashboard'
-        }
+    // {
+    //     route: '/customs-report/fact-item-mutation-bb-unit',
+    //     name: 'customs-report-item-mutation-bb-unit',
+    //     moduleId: './modules/customs-report/fact-item-mutation-bb-unit/index',
+    //     nav: true,
+    //     title: 'Laporan Pertanggungjawaban Mutasi Bahan Baku Unit',
+    //     auth: true,
+    //     settings: {
+    //         group: "customs-report",
+    //         permission: { "C5": 1, "C9": 1 },
+    //         iconClass: 'fa fa-dashboard'
+    //     }
 
-    },
+    // },
     {
         route: '/customs-report/fact-item-mutation-bp-central',
         name: 'customs-report-item-mutation-bp-central',
@@ -81,20 +81,20 @@ module.exports = [
         }
 
     },
-    {
-        route: '/customs-report/fact-item-mutation-bp-unit',
-        name: 'customs-report-item-mutation-bp-unit',
-        moduleId: './modules/customs-report/fact-item-mutation-bp-unit/index',
-        nav: true,
-        title: 'Laporan Pertanggungjawaban Mutasi Bahan Penolong Unit',
-        auth: true,
-        settings: {
-            group: "customs-report",
-            permission: { "C5": 1, "C9": 1 },
-            iconClass: 'fa fa-dashboard'
-        }
+    // {
+    //     route: '/customs-report/fact-item-mutation-bp-unit',
+    //     name: 'customs-report-item-mutation-bp-unit',
+    //     moduleId: './modules/customs-report/fact-item-mutation-bp-unit/index',
+    //     nav: true,
+    //     title: 'Laporan Pertanggungjawaban Mutasi Bahan Penolong Unit',
+    //     auth: true,
+    //     settings: {
+    //         group: "customs-report",
+    //         permission: { "C5": 1, "C9": 1 },
+    //         iconClass: 'fa fa-dashboard'
+    //     }
 
-    },
+    // },
     {
         route: '/customs-report/finished-good',
         name: 'customs-report-finished-good',
