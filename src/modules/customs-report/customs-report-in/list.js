@@ -21,7 +21,7 @@ export class List {
         }
     };
      
-    Types = ["","BC 262","BC 23","BC 40","BC 27"];
+    Types = ["","BC 2.6.2","BC 2.3","BC 4.0","BC 2.7"];
 
     search(){
          this.error = {};
