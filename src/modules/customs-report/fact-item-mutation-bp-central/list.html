@@ -35,6 +35,7 @@
                     <tr>
                         <td>Kode Barang</td>
                         <td>Nama Barang</td>
+                        <td>Tipe</td>
                         <td>Satuan</td>
                         <td>Saldo Awal</td>
                         <td>Pemasukan</td>
@@ -49,6 +50,7 @@
                     <tr repeat.for="item of data">
                             <td class="text-left">${item.ItemCode}</td>
                             <td class="text-left">${item.ItemName}</td>
+                            <td class="text-left">${item.SupplierType}</td>
                             <td class="text-left">${item.UnitQtyName}</td>
                             <td class="text-right">${item.BeginQty}</td>
                             <td class="text-right">${item.ReceiptQty}</td>
