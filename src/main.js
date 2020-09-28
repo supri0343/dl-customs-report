@@ -30,7 +30,7 @@ export async function configure(aurelia) {
         }
       }
 
-      var auth = "https://dl-auth-api.azurewebsites.net/v1/";
+      var auth = "https://com-danliris-service-auth.azurewebsites.net/v1/";
       var customsReport = "https://com-danliris-service-support.azurewebsites.net/v1/";
 
 
