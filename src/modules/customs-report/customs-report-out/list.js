@@ -61,6 +61,7 @@ export class List {
                for(var a of result.data){
                    var bc=a.BCType.toString();
                    var doc=a.BCNo;
+                   var bcdate = a.BCDate.toString();
                    if(!this.rowCount[bc]){
                        this.rowCount[bc]=1;
                    }
@@ -76,6 +77,15 @@ export class List {
                    else{
                        rowDoc[doc+bc]++;
                    }
+
+                   if(!rowDoc[bc+bcdate]){
+                    index++;
+                    //a.count=index;
+                    rowDoc[bc+bcdate]=1;
+                    }
+                    else{
+                        rowDoc[bc+bcdate]++;
+                    }
                }
                for(var b of result.data){
                    let bcno=result.data.find(o=> o.BCType + o.BCNo==b.BCType + b.BCNo);
@@ -85,6 +95,11 @@ export class List {
                    let bctipe=result.data.find(o=> o.BCType ==b.BCType);
                    if(bctipe){
                        bctipe.rowspan=this.rowCount[b.BCType];
+                   }
+                   let bcdates=result.data.find(o=> o.BCType + o.BCDate == b.BCType + b.BCDate);
+                   //console.log(bcdates)
+                   if(bcdates){
+                        bcdates.bcdatespan=rowDoc[b.BCType + b.BCDate];
                    }
                }
                this.data=result.data;
