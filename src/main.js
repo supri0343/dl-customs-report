@@ -31,11 +31,15 @@ export async function configure(aurelia) {
       }
 
       var auth = "https://com-danliris-service-auth.azurewebsites.net/v1/";
-      var customsReport = "https://com-danliris-service-support.azurewebsites.net/v1/";
+      var customsReport = "https://com-danliris-service-support.azurewebsites.net/v1/" ;
+      var purchasing = "http://localhost:55497/v1/" ;
+      var garmentProduction = "https://com-danliris-service-garment.azurewebsites.net/";
 
 
       config.registerEndpoint('auth', auth);
       config.registerEndpoint('customs-report', customsReport, defaultConfig);
+      config.registerEndpoint('purchasing', purchasing, defaultConfig);
+      config.registerEndpoint('garment-production', garmentProduction, defaultConfig);
     })
     .plugin("aurelia-authentication", baseConfig => {
       baseConfig.configure(authConfig);
