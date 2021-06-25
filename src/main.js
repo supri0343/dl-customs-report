@@ -30,15 +30,17 @@ export async function configure(aurelia) {
         }
       }
 
-      var auth = "https://com-danliris-service-auth.azurewebsites.net/v1/";
+      var auth = "https://com-danliris-service-auth-dev.azurewebsites.net/v1/";
       var customsReport = "https://com-danliris-service-support.azurewebsites.net/v1/" ;
       var purchasing = "https://com-danliris-service-purchasing.azurewebsites.net/v1/" ;
+      var inventory = "https://com-danliris-service-inventory-prd.azurewebsites.net/v1/";
       var garmentProduction = "https://com-danliris-service-garment.azurewebsites.net/";
 
 
       config.registerEndpoint('auth', auth);
       config.registerEndpoint('customs-report', customsReport, defaultConfig);
       config.registerEndpoint('purchasing', purchasing, defaultConfig);
+      config.registerEndpoint('inventory', inventory, defaultConfig);
       config.registerEndpoint('garment-production', garmentProduction, defaultConfig);
     })
     .plugin("aurelia-authentication", baseConfig => {
