@@ -33,6 +33,22 @@ export class List {
         this.service.search(args)
      
             .then(result => {
+                this.rowCount=[];
+                var index=0; 
+                for(var a of result.data){
+                    var type = a.ClassificationCode.toString();
+                    if(!this.rowCount[type]){
+                        this.rowCount[type]=1;
+                    }else{
+                        this.rowCount[type]++;
+                    }
+                }
+                for(var b of result.data){
+                    let clastype = result.data.find(o=> o.ClassificationCode == b.ClassificationCode);
+                    if(clastype){
+                        clastype.rowspan=this.rowCount[b.ClassificationCode]
+                    }
+                }
                this.data=result.data;     
                
             });
