@@ -36,6 +36,7 @@
                 <tr>
                     <td>Kode Barang</td>
                     <td>Nama Barang</td>
+                    <td>Kategori Barang</td>
                     <td>Sat</td>
                     <td>Saldo Awal</td>
                     <td>Pemasukan</td>
@@ -49,8 +50,9 @@
             <tbody>
              
                 <tr repeat.for="item of data">
-                    <td class="text-left">${item.ClassificationCode}</td>
-                    <td class="text-left">${item.ClassificationName}</td>
+                    <td class="text-left" if.bind="item.rowspan" rowspan="${item.rowspan}">${item.ClassificationCode}</td>
+                    <td class="text-left" if.bind="item.rowspan" rowspan="${item.rowspan}">${item.ClassificationName}</td>
+                    <td class="text-left">${item.Productname}</td>
                     <td class="text-left">${item.UnitQtyName}</td>
                     <td class="text-right">${item.SaldoAwal}</td>
                     <td class="text-right">${item.Pemasukan}</td>
