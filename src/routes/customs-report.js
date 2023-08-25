@@ -7,7 +7,7 @@ module.exports = [
         title: 'Laporan Pemasukan Barang per Dokumen Pabean',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W1": 1,},
             iconClass: 'fa fa-dashboard'
@@ -21,7 +21,7 @@ module.exports = [
         title: 'Laporan Pengeluaran Barang per Dokumen Pabean',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W2": 1,},
             iconClass: 'fa fa-dashboard'
@@ -35,7 +35,7 @@ module.exports = [
         title: 'Laporan Posisi WIP',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W3": 1,},
             iconClass: 'fa fa-dashboard'
@@ -47,15 +47,14 @@ module.exports = [
         name: 'customs-report-item-mutation-bb-central',
         moduleId: './modules/customs-report/fact-item-mutation-bb-central/index',
         nav: true,
-        title: 'Laporan Pertanggungjawaban Mutasi Bahan Baku Pusat',
+        title: 'Laporan Pertanggungjawaban Mutasi Bahan Baku Pusat & Bahan Penolong Pusat',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W4": 1,},
             iconClass: 'fa fa-dashboard'
         }
-
     },
     // {
     //     route: '/customs-report/fact-item-mutation-bb-unit',
@@ -71,21 +70,21 @@ module.exports = [
     //     }
 
     // },
-    {
-        route: '/customs-report/fact-item-mutation-bp-central',
-        name: 'customs-report-item-mutation-bp-central',
-        moduleId: './modules/customs-report/fact-item-mutation-bp-central/index',
-        nav: true,
-        title: 'Laporan Pertanggungjawaban Mutasi Bahan Penolong Pusat',
-        auth: true,
-        settings: {
-            group: "customs-report",
-            // permission: { "B1": 1, "BC":1, "C9": 1 },
-            permission: { "W5": 1,},
-            iconClass: 'fa fa-dashboard'
-        }
+    // {
+    //     route: '/customs-report/fact-item-mutation-bp-central',
+    //     name: 'customs-report-item-mutation-bp-central',
+    //     moduleId: './modules/customs-report/fact-item-mutation-bp-central/index',
+    //     nav: true,
+    //     title: 'Laporan Pertanggungjawaban Mutasi Bahan Baku Penolong Pusat',
+    //     auth: true,
+    //     settings: {
+    //         group: "it-inventory",
+    //         // permission: { "B1": 1, "BC":1, "C9": 1 },
+    //         permission: { "W5": 1,},
+    //         iconClass: 'fa fa-dashboard'
+    //     }
 
-    },
+    // },
     // {
     //     route: '/customs-report/fact-item-mutation-bp-unit',
     //     name: 'customs-report-item-mutation-bp-unit',
@@ -108,7 +107,7 @@ module.exports = [
         title: 'Laporan Pertanggungjawaban Mutasi Barang Jadi',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W6": 1,},
             iconClass: 'fa fa-dashboard'
@@ -123,7 +122,7 @@ module.exports = [
         title: 'Laporan Pertanggungjawaban Mutasi Mesin dan Peralatan',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W7": 1,},
             iconClass: 'fa fa-dashboard'
@@ -138,7 +137,7 @@ module.exports = [
         title: 'Laporan Pertanggungjawaban Barang Reject dan Scrap',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W8": 1,},
             iconClass: 'fa fa-dashboard'
@@ -153,7 +152,7 @@ module.exports = [
         title: 'CCTV',
         auth: true,
         settings: {
-            group: "customs-report",
+            group: "it-inventory",
             // permission: { "B1": 1, "BC":1, "C9": 1 },
             permission: { "W9": 1,},
             iconClass: 'fa fa-dashboard'

@@ -23,4 +23,16 @@ export class Service extends RestService {
         let endpoint = `${serviceUri}/bbCentrals/download?dateFrom=${info.dateFrom}&dateTo=${info.dateTo}`;
         return super.getXls(endpoint);
     }
+    
+    search1(info) {
+        let endpoint = `${serviceUri}/bpCentrals`;
+        console.log(info)
+        return super.list(endpoint, info);
+    }
+
+    generateExcel1(info) {
+        console.log(info);
+        let endpoint = `${serviceUri}/bpCentrals/download?dateFrom=${info.dateFrom}&dateTo=${info.dateTo}`;
+        return super.getXls(endpoint);
+    }
 }
