@@ -1,4 +1,4 @@
-import { inject } from 'aurelia-framework';
+import { inject, bindable } from 'aurelia-framework';
 import { Service } from "./service";
 import { Router } from 'aurelia-router';
 import moment from 'moment';
@@ -10,7 +10,12 @@ export class List {
         this.router = router;
         
     }
-    
+
+    jnsbhn = " ";
+    @bindable JenisBhn;
+   
+    ItemType = ['BAHAN BAKU', 'BAHAN PENOLONG'];
+
     info = { page: 1,size:50};
 
     controlOptions = {
@@ -22,6 +27,18 @@ export class List {
         }
     };
      
+    JenisBhnChanged(newvalue) {
+        if (newvalue) {
+            if (newvalue === "BAHAN BAKU") {
+                this.jnsbhn = "BB";
+                console.log(this.jnsbhn);
+            }
+            else {
+                this.jnsbhn = "BP"; 
+                console.log(this.jnsbhn);
+            }
+        }
+    }
 
     search(){
         this.error = {};
@@ -42,21 +59,28 @@ export class List {
     }
 
     searching() {
-     
     var args = {
             page: this.info.page,
             size: this.info.size,
             dateFrom : this.dateFrom ? moment(this.dateFrom).format("YYYY-MM-DD") : "",
             dateTo : this.dateTo ? moment(this.dateTo).format("YYYY-MM-DD") : ""
         }
-        this.service.search(args)
-     
-            .then(result => {
-               this.info.total=result.info.total;    
-               this.data=result.data;
-               
-            });
-            
+        if (this.jnsbhn === "BB") 
+           {
+             this.service.search(args)
+             .then(result => {
+             this.info.total=result.info.total;    
+             this.data=result.data;
+             });  
+            }
+         else
+           {
+             this.service.search1(args)
+             .then(result => {
+             this.info.total=result.info.total;    
+             this.data=result.data;
+             });  
+            }
     }
 
     changePage(e) {
@@ -68,8 +92,8 @@ export class List {
         this.type = "";
         this.dateFrom = "";
         this.dateTo = "";
-        
-        this.info.page = 1;
+        this.data = []
+        this.info.page = 0;      
     }
 
     ExportToExcel() {
@@ -87,7 +111,15 @@ export class List {
                 dateFrom : this.dateFrom ? moment(this.dateFrom).format("YYYY-MM-DD") : "",
                 dateTo : this.dateTo ? moment(this.dateTo).format("YYYY-MM-DD") : ""
             }
-            this.service.generateExcel(info);
+
+        if (this.jnsbhn === "BB") 
+           {
+               this.service.generateExcel(info);
+           }
+         else
+           {
+               this.service.generateExcel1(info);
+           } 
         }
     }
 }
