@@ -158,5 +158,20 @@ module.exports = [
             iconClass: 'fa fa-dashboard'
         }
 
+    },
+    {
+        route: '/customs-report/log-histories',
+        name: 'customs-report-log-histories',
+        moduleId: './modules/customs-report/log-histories/index',
+        nav: true,
+        title: 'Log History',
+        auth: true,
+        settings: {
+            group: "it-inventory",
+            // permission: { "B1": 1, "BC":1, "C9": 1 },
+            permission: { "W10": 1,},
+            iconClass: 'fa fa-dashboard'
+        }
+
     }
 ]
