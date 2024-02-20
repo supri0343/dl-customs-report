@@ -63,7 +63,7 @@ export class List {
       .search(args)
 
       .then((result) => {
-        this.rowCount = [];
+        this.row = [];
         var rowDoc = [];
         this.info.total = result.info.total;
         var index = 0;
@@ -71,23 +71,23 @@ export class List {
           var bc = a.BCType.toString();
           var doc = a.BCNo;
           var bcdate = a.BCDate.toString();
-          if (!this.rowCount[bc]) {
-            this.rowCount[bc] = 1;
+          if (!this.row[bc]) {
+            this.row[bc] = 1;
           } else {
-            this.rowCount[bc]++;
+            this.row[bc]++;
           }
 
-          if (!rowDoc[doc + bc]) {
+          if (!rowDoc[doc + bc + bcdate]) {
             index++;
-            //a.count=index;
-            rowDoc[doc + bc] = 1;
+            //a.=index;
+            rowDoc[doc + bc + bcdate] = 1;
           } else {
-            rowDoc[doc + bc]++;
+            rowDoc[doc + bc + bcdate]++;
           }
 
           if (!rowDoc[bc + bcdate]) {
             index++;
-            //a.count=index;
+            //a.=index;
             rowDoc[bc + bcdate] = 1;
           } else {
             rowDoc[bc + bcdate]++;
@@ -95,14 +95,14 @@ export class List {
         }
         for (var b of result.data) {
           let bcno = result.data.find(
-            (o) => o.BCType + o.BCNo == b.BCType + b.BCNo
+            (o) => o.BCType + o.BCNo + o.BCDate == b.BCType + b.BCNo + b.BCDate
           );
           if (bcno) {
-            bcno.docspan = rowDoc[b.BCNo + b.BCType];
+            bcno.docspan = rowDoc[b.BCNo + b.BCType + b.BCDate];
           }
           let bctipe = result.data.find((o) => o.BCType == b.BCType);
           if (bctipe) {
-            bctipe.rowspan = this.rowCount[b.BCType];
+            bctipe.rowspan = this.row[b.BCType];
           }
           let bcdates = result.data.find(
             (o) => o.BCType + o.BCDate == b.BCType + b.BCDate
@@ -125,7 +125,7 @@ export class List {
     this.type = "";
     this.dateFrom = "";
     this.dateTo = "";
-
+    this.no = "";
     this.info.page = 1;
   }
 
