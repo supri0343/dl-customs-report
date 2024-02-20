@@ -53,7 +53,7 @@
                     <td if.bind="item.docspan" rowspan="${item.docspan}">${item.count}</td>
                     <td class="text-left" if.bind="item.rowspan" rowspan="${item.rowspan}">${item.BCType}</td>
                     <!--<td class="text-left" if.bind="item.code!=null" rowspan="${item.row_count}">${item.BCType}</td>-->
-                    <td class="text-right" if.bind="item.bcdatespan" rowspan="${item.bcdatespan}">${item.BCDate |
+                    <td class="text-right" if.bind="item.docspan" rowspan="${item.docspan}">${item.BCDate |
                         dateFormat:'D MMM YYYY'}</td>
                     <td class="text-left" if.bind="item.docspan" rowspan="${item.docspan}">${item.BCNo}</td>
                     <td class="text-left">${item.BonNo}</td>
