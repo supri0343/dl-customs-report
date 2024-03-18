@@ -1,8 +1,14 @@
 export class Index {
-    configureRouter(config, router) {
-        config.map([
-            { route: ['', 'list'], moduleId: './list', name: 'list', nav: true, title: 'List: Laporan Pertanggungjawaban Mutasi Bahan Baku Pusat' }
-        ]);
-        this.router = router;
-    }
+  configureRouter(config, router) {
+    config.map([
+      {
+        route: ["", "list"],
+        moduleId: "./list",
+        name: "list",
+        nav: true,
+        title: "List: Laporan Mutasi Bahan Baku & Bahan Penolong",
+      },
+    ]);
+    this.router = router;
+  }
 }
