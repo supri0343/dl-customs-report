@@ -34,17 +34,23 @@
         <table class="table table-bordered table-hover" border="1" id="myTable">
             <thead align="center">
                 <tr>
+                    <td rowspan="2">No</td>
+                    <td colspan="3">Data Dok Pabean</td>
+                    <td colspan="2">Bukti Pengeluaran Barang</td>
+                    <td rowspan="2">Penerima Barang</td>
+                    <td rowspan="2">Kode Barang</td>
+                    <td rowspan="2">Nama Barang</td>
+                    <td rowspan="2">Satuan Barang</td>
+                    <td rowspan="2">Jumlah Barang</td>
+                    <!-- <td rowspan="2">Nilai Barang</td>
+                    <td rowspan="2">Mata Uang</td> -->
+                </tr>
+                <tr>
+                    <td>Jenis</td>
+                    <td>No. Daftar</td>
+                    <td>Tgl. Daftar</td>
                     <td>No</td>
-                    <td>Jenis Dokumen</td>
-                    <td colspan="2">Dokumen Pabean</td>
-                    <td colspan="2">Bukti Pengiriman Barang</td>
-                    <td>Penerima Barang</td>
-                    <td>Kode Barang</td>
-                    <td>Nama Barang</td>
-                    <td>Jumlah</td>
-                    <td>Sat</td>
-                    <td>Nilai Barang</td>
-                    <td>Mata Uang</td>
+                    <td>Tanggal</td>
                 </tr>
             </thead>
             <tbody>
@@ -61,10 +67,10 @@
                     <td class="text-left">${item.SupplierName}</td>
                     <td class="text-left">${item.ItemCode}</td>
                     <td class="text-left">${item.ItemName}</td>
-                    <td class="text-right">${item.Quantity}</td>
                     <td class="text-left">${item.UnitQtyName}</td>
-                    <td class="text-right">${item.Nominal}</td>
-                    <td class="text-left">${item.CurrencyCode}</td>
+                    <td class="text-right">${item.Quantity}</td>
+                    <!-- <td class="text-right">${item.Nominal}</td>
+                    <td class="text-left">${item.CurrencyCode}</td> -->
                 </tr>
             </tbody>
         </table>
