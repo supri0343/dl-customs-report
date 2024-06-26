@@ -69,8 +69,8 @@
                     <td class="text-left">${item.ItemName}</td>
                     <td class="text-left">${item.UnitQtyName}</td>
                     <td class="text-right">${item.Quantity}</td>
-                    <td class="text-right" if.bind="item.docspan && item.BCType =='BC 23'" rowspan="${item.docspan}">${item.Nominal}</td>
-                    <td class="text-right" if.bind="item.BCType != 'BC 23'" >${item.Nominal}</td>
+                    <td class="text-right" if.bind="item.docspan && (item.BCType =='BC 23' || item.BCType =='BC 27')" rowspan="${item.docspan}">${item.Nominal}</td>
+                    <td class="text-right" if.bind="(item.BCType != 'BC 23' && item.BCType != 'BC 27')" >${item.Nominal}</td>
                     <td class="text-left">${item.CurrencyCode}</td>
                 </tr>
             </tbody>
