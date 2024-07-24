@@ -35,6 +35,7 @@ export async function configure(aurelia) {
       var purchasing = "https://com-danliris-service-purchasing.azurewebsites.net/v1/" ;
       var inventory = "https://com-danliris-service-inventory-prd.azurewebsites.net/v1/";
       var garmentProduction = "https://com-danliris-service-garment.azurewebsites.net/";
+      var itInventory = "https://com-danliris-service-it-inventory.azurewebsites.net/v1/";
 
 
       config.registerEndpoint('auth', auth);
@@ -42,6 +43,7 @@ export async function configure(aurelia) {
       config.registerEndpoint('purchasing', purchasing, defaultConfig);
       config.registerEndpoint('inventory', inventory, defaultConfig);
       config.registerEndpoint('garment-production', garmentProduction, defaultConfig);
+      config.registerEndpoint('it-inventory', itInventory, defaultConfig);
     })
     .plugin("aurelia-authentication", baseConfig => {
       baseConfig.configure(authConfig);
