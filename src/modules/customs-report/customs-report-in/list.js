@@ -72,26 +72,27 @@ export class List {
         for (var a of result.data) {
           var bc = a.BCType.toString();
           var doc = a.BCNo.toString();
+          var bonNo = a.BonNo.toString();
           if (!this.rowCount[bc]) {
             this.rowCount[bc] = 1;
           } else {
             this.rowCount[bc]++;
           }
 
-          if (!rowDoc[doc + bc]) {
+          if (!rowDoc[doc + bc + bonNo]) {
             index++;
             //a.count=index;
-            rowDoc[doc + bc] = 1;
+            rowDoc[doc + bc + bonNo] = 1;
           } else {
-            rowDoc[doc + bc]++;
+            rowDoc[doc + bc + bonNo]++;
           }
         }
         for (var b of result.data) {
           let bcno = result.data.find(
-            (o) => o.BCType + o.BCNo == b.BCType + b.BCNo
+            (o) => o.BCType + o.BCNo + o.BonNo == b.BCType + b.BCNo + b.BonNo
           );
           if (bcno) {
-            bcno.docspan = rowDoc[b.BCNo + b.BCType];
+            bcno.docspan = rowDoc[b.BCNo + b.BCType + b.BonNo];
           }
           let bctipe = result.data.find((o) => o.BCType == b.BCType);
           if (bctipe) {
